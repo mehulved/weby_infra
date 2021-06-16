@@ -10,7 +10,7 @@ module "sg-rds" {
   name                = "Allow RDS connections - ${var.environment}"
   vpc_id              = module.vpc.vpc_id
   create              = true
-  ingress_rules       = ["mysql-tcp", ]
+  ingress_rules       = ["postgresql-tcp", ]
   ingress_cidr_blocks = var.http_ingress_cidr_blocks
   egress_rules        = ["all-all", ]
   egress_cidr_blocks  = ["0.0.0.0/0", ]
