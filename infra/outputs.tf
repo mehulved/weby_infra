@@ -43,7 +43,7 @@ output "public_subnets_cidr_blocks" {
 }
 
 output "db_endpoint" {
-  value = module.db.db_instance_endpoint
+  value = module.db.db_instance_address
 }
 
 output "db_username" {
