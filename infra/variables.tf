@@ -107,3 +107,18 @@ variable "db_port" {
   type    = number
   default = 5432
 }
+
+variable "repo_name" {
+  type    = string
+  default = "weby"
+}
+
+variable "log_group_name" {
+  type    = string
+  default = "weby"
+}
+
+variable "app_name" {
+  type    = string
+  default = "weby"
+}

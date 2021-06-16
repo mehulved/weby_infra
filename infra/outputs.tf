@@ -64,3 +64,11 @@ output "db_name" {
 output "db_engine" {
   value = var.db_engine
 }
+
+output "log_group_name" {
+  value = var.log_group_name
+}
+
+output "repo_url" {
+  value = aws_ecr_repository.repo.repository_url
+}
