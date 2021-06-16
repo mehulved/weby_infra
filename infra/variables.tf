@@ -60,7 +60,7 @@ variable "lb_tg_name_prefix" {
 
 variable "ecs_cluster_name" {
   type    = string
-  default = "weby-production-cluster"
+  default = "weby-cluster"
 }
 
 variable "db_engine" {
