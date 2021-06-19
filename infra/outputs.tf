@@ -72,3 +72,11 @@ output "log_group_name" {
 output "repo_url" {
   value = aws_ecr_repository.repo.repository_url
 }
+
+output "cdn_bucket" {
+  value = aws_s3_bucket.asset_bucket.bucket_regional_domain_name
+}
+
+output "cdn_hostname" {
+  value = aws_cloudfront_distribution.asset_cdn.domain_name
+}
