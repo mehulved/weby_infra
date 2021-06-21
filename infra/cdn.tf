@@ -8,12 +8,12 @@ resource "aws_s3_bucket_policy" "asset_bucket" {
     Id      = "AllowWriteObjectsPolicy"
     Statement = [
       {
-        Sid       = "StoreObjects"
-        Effect    = "Allow"
+        Sid    = "StoreObjects"
+        Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/assessment-account1" 
+          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/assessment-account1"
         }
-        Action    = ["s3:PutObject","s3:ListBucket"]
+        Action = ["s3:PutObject", "s3:ListBucket"]
         Resource = [
           aws_s3_bucket.asset_bucket.arn,
           "${aws_s3_bucket.asset_bucket.arn}/*",
